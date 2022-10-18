@@ -20,7 +20,7 @@ import {FaQuoteLeft} from 'react-icons/fa'
 import {FaUser} from 'react-icons/fa'
 import {FaStopwatch20} from 'react-icons/fa'
 import {FaFacebook, FaTwitter, FaTiktok, FaYoutube, FaCopyright, FaArrowUp, FaArrowRight, FaUserFriends,FaShoppingBasket,FaHamburger} from 'react-icons/fa'
-import { useState,useEffect,useRef } from 'react';
+import { useState,useEffect } from 'react';
 import Header from './header/header.js';
 
 
@@ -71,19 +71,19 @@ const productList = [[{burgerName:'Smoked Brisket',description:'Pulled Pork, Bee
      ],
      [
       {menuName:'Smoked Brisket Pizza',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$31`,recomended:true,new:false,menuUrl:'/#'},
-      {menuName:'Pulled Chicken Sandwich',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$22`,recomended:false,new:false,menuUrl:'/#'},
+      {menuName:'Pulled Chicken Sandwich',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$22`,recomended:true,new:false,menuUrl:'/#'},
       {menuName:'Ocean Spray Cranbery Juice',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$35`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'6 Piece Mozzarella sticks',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$30`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'Martinellis Apple Juice',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$23`,recomended:false,new:true,menuUrl:'/#'},
-      {menuName:'Peanutty Blast Smothie',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$18`,recomended:true,new:false,menuUrl:'/#'},
+      {menuName:'Peanutty Blast Smothie',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$18`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'Mango Mania Smoothie',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$19`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'Canada Dry Ginger Ale',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$30`,recomended:false,new:true,menuUrl:'/#'},
      ],
      [
       {menuName:'Smoked Brisket Chicken',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$30`,recomended:true,new:false,menuUrl:'/#'},
-      {menuName:'Pulled Chicken Sandwich',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$22`,recomended:false,new:false,menuUrl:'/#'},
+      {menuName:'Pulled Chicken Sandwich',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$22`,recomended:true,new:false,menuUrl:'/#'},
       {menuName:'Ocean Spray Cranbery Juice',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$19`,recomended:false,new:false,menuUrl:'/#'},
-      {menuName:'6 Piece Mozzarella sticks',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$20`,recomended:true,new:false,menuUrl:'/#'},
+      {menuName:'6 Piece Mozzarella sticks',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$20`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'Martinellis Apple Juice',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$29`,recomended:false,new:true,menuUrl:'/#'},
       {menuName:'Peanutty Blast Smothie',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$28`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'Mango Mania Smoothie',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$20`,recomended:false,new:false,menuUrl:'/#'},
@@ -92,20 +92,20 @@ const productList = [[{burgerName:'Smoked Brisket',description:'Pulled Pork, Bee
      [
       {menuName:'Smoked Brisket Beverage',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$29`,recomended:true,new:false,menuUrl:'/#'},
       {menuName:'Pulled Chicken Sandwich',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$32`,recomended:true,new:false,menuUrl:'/#'},
-      {menuName:'Ocean Spray Cranbery Juice',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$33`,recomended:false,new:true,menuUrl:'/#'},
+      {menuName:'Ocean Spray Cranbery Juice',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$33`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'6 Piece Mozzarella sticks',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$30`,recomended:false,new:false,menuUrl:'/#'},
-      {menuName:'Martinellis Apple Juice',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$19`,recomended:true,new:true,menuUrl:'/#'},
+      {menuName:'Martinellis Apple Juice',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$19`,recomended:false,new:true,menuUrl:'/#'},
       {menuName:'Peanutty Blast Smothie',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$28`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'Mango Mania Smoothie',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$20`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'Canada Dry Ginger Ale',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$35`,recomended:false,new:true,menuUrl:'/#'},
      ],
      [
-      {menuName:'Smoked Brisket Coffee',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$30`,recomended:false,new:false,menuUrl:'/#'},
+      {menuName:'Smoked Brisket Coffee',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$30`,recomended:true,new:false,menuUrl:'/#'},
       {menuName:'Pulled Chicken Sandwich',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$22`,recomended:true,new:false,menuUrl:'/#'},
-      {menuName:'Ocean Spray Cranbery Juice',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$39`,recomended:false,new:true,menuUrl:'/#'},
+      {menuName:'Ocean Spray Cranbery Juice',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$39`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'6 Piece Mozzarella sticks',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$30`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'Martinellis Apple Juice',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$29`,recomended:false,new:true,menuUrl:'/#'},
-      {menuName:'Peanutty Blast Smothie',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$18`,recomended:true,new:false,menuUrl:'/#'},
+      {menuName:'Peanutty Blast Smothie',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$18`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'Mango Mania Smoothie',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$45`,recomended:false,new:false,menuUrl:'/#'},
       {menuName:'Canada Dry Ginger Ale',menuDescription:'Pulled Pork, Beer Braise Bisket, & Quarter Racks of Ribs served with your chioce of side',menuProductPrice:`$25`,recomended:false,new:true,menuUrl:'/#'},
      ],
@@ -187,7 +187,7 @@ const [transition, setTransition] = useState(false)
   const [numOfProducts, setNumOfProducts] = useState(productList.length);
   const [currentProducts, setCurrentProducts] = useState(1);
 
-  
+
   const rightArrow = ()=>{
     setArrayIndex(arrayIndex += 1)
     arrayIndex >= productList.length && setArrayIndex(arrayIndex = 0); 
@@ -222,6 +222,13 @@ const menuPick = (i)=>{
 const menuToRed = (i)=>{
   SetRedMenuActive(i)
 }
+
+
+
+
+
+
+
   return (
     <div className={''}>
       
@@ -318,7 +325,6 @@ const menuToRed = (i)=>{
       
       <div className={styles.specialsCombo__sliderContainer}>
         <div className={styles.specialsCombo__sliderProducts}>
-          
         {ourProductList.map((product,index)=>
           <div className={styles.specialsCombo__sliderProducts_Container}  id = {transition ? '' : ' '}  key={'ourProductList' + index}>
           <div className={styles.specialsCombo__sliderProducts_Container_A} key={product.burgerName + index}>{product.burgerName}</div>
@@ -330,8 +336,9 @@ const menuToRed = (i)=>{
             <img src={product.burgerPix} alt = 'Burger' loading='lazy' className={styles.specialsCombo__sliderProducts_Container_img} key={product.burgerPix + index} />
           </div>
           </div>
-)}
-        
+          
+         
+        )}
         </div>
         <div className={styles.specialsCombo__sliderArrows}>
          <div className={styles.specialsCombo__sliderArrows_L}><FaArrowAltCircleLeft onClick={leftArrow} /></div> 
